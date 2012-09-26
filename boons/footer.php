@@ -35,9 +35,7 @@
 			    collapsible: true,
 			    allwayOpen: false
 			};
-
 		$('#accordion').accordion( accOpt );
-
 		if ( tabID && tabID > 0 ) { $("#accordion").accordion( 'activate', tabID ); }
 
 		// Toggle Details window
@@ -57,6 +55,10 @@
 			  }
 			});
 		});
+
+		// Simple Slider for details window
+
+		$('#details-window').slides();
 
 
 	})(jQuery);

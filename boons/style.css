@@ -279,19 +279,25 @@ Version:        0.4.1
             /* background-color: rgba(255, 255, 255, 0.75); */
         }
 
-        #access div > ul > li:hover,
         #access div > ul > li.current-menu-item,
+        #access div > ul > li.current-menu-item:hover,
         #access div > ul > li.current-menu-parent,
         #access div > ul > li.current-menu-ancestor,
-        #cta-access div > ul > li > a:hover,
-        #cta-access div > ul > li.current-menu-item > a,
-        #cta-access div > ul > li.current-menu-parent > a,
-        #properties-menu div > ul > li > a:hover,
-        #properties-menu div > ul > li.current-menu-item > a,
-        #properties-menu div > ul > li.current-menu-parent > a {
+        #cta-access div > ul > li.current-menu-item,
+        #cta-access div > ul > li.current-menu-parent,
+        #properties-menu div > ul > li.current-menu-item,
+        #properties-menu div > ul > li.current-menu-parent {
             color: rgb(42, 81, 223);
-            background-color: rgba(255, 255, 255, 0.75);
+            background-color: rgba(255, 255, 255, 0.85);
         }
+
+        #access div > ul > li:hover,
+        #cta-access div > ul > li:hover,
+        #properties-menu div > ul > li:hover {
+            color: rgb(42, 81, 223);
+            background-color: rgba(255, 255, 255, 0.50);
+        }
+
 
  /* CTA menu */
     #cta {
