@@ -24,22 +24,17 @@
 		// Accordion within content
 		// Accordion Options & Accordion open on certain tab deppending on string in URL
 		var tabID = <?php if ( !$_GET['id']) { echo 0;} else {echo $_GET['id'];} ?>;
+
 		var accOpt = {
 			    active: false,
 			    header: '.acc-header',
 			    navigation: true,
-			    event: 'mouseover',
 			    event: 'click',
 			    fillSpace: false,
 			    animated: 'easeslide',
 			    collapsible: true,
 			    allwayOpen: false
 			};
-		var accTab = <?php if ( !$_GET['id']) { echo 0;} else {echo $_GET['id'];} ?>;
-		$(document).ready(function(){
-			$('#accordion').accordion( accOpt );
-			$("#accordion").accordion( 'activate', accTab );
-		});
 
 		$('#accordion').accordion( accOpt );
 
