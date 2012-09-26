@@ -169,7 +169,7 @@ Version:        0.4.1
         left: 10.9375%;
         width: 15.625%;
         height: 100%;
-       /* background: red;*/
+        z-index: 9000;
     }
 
     #branding {
@@ -236,6 +236,10 @@ Version:        0.4.1
             list-style: none;
         }
 
+        #access div > ul > li {
+            position: relative;
+        }
+
         #access div > ul > li > a,
         #cta-access div > ul > li > a,
         #properties-menu  div > ul > li > a {
@@ -263,6 +267,7 @@ Version:        0.4.1
         #properties-menu  div > ul > li.current-menu-item > a,
         #properties-menu  div > ul > li.current-menu-ancestor > a {
             background-position: 10px -62px;
+            background-color: rgba(255, 255, 255, 0.75);
         }
 
         #access div > ul > li > a:hover,
@@ -308,6 +313,7 @@ Version:        0.4.1
         left: 100%;
         top: 0;
         width: 80%;
+        z-index: 9999;
 
         -webkit-transition: opacity 300ms linear;
         -moz-transition: opacity 300ms linear;
@@ -315,7 +321,7 @@ Version:        0.4.1
         transition: opacity 300ms linear;
      }
 
-     #access ul > li.current-menu-item ul,
+     #access ul > li:hover ul,
      #properties-menu ul > li.current-menu-item ul,
      #properties-menu ul > li.current-menu-ancestor ul {
         display: block;
@@ -334,9 +340,9 @@ Version:        0.4.1
         width: 100%;
         line-height: 1.5;
         font-size: 1.4em;
-        color: rgb(42, 81, 223);
+        color: rgb(255, 255, 255);
         text-decoration: none;
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(42, 81, 223, 0.85);
 
         -webkit-transition: background 300ms linear;
         -moz-transition: background 300ms linear;
@@ -348,7 +354,8 @@ Version:        0.4.1
      #access ul ul > li > a:hover,
      #properties-menu  ul ul > li.current-menu-item > a,
      #properties-menu  ul ul > li > a:hover {
-        background: rgba(255, 255, 255, 1);
+        color: rgb(42, 81, 223);
+        background: rgba(255, 255, 255, 0.85);
      }
 
     /* Language Selector */
