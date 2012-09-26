@@ -248,14 +248,18 @@ Version:        0.4.1
             width: 100%;
             line-height: 1.5;
             font-size: 2.1em;
-            color: #CCC;
+            color: inherit;
             text-decoration: none;
             margin: 1.65289% 0;
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
         }
 
-        #access div > ul > li > a,
-        #properties-menu  div > ul > li > a {
-            padding: 0 1em;
+        #access div > ul > li,
+        #properties-menu  div > ul > li {
             box-sizing: border-box;
             background: transparent;
             background-image: url('images/arrow-sprite.png');
@@ -263,23 +267,30 @@ Version:        0.4.1
             background-position: 10px 0px;
         }
 
-        #access div > ul > li.current-menu-item > a,
+        #access div > ul > li > a {
+            padding: 0 1em;
+        }
+
+        #access div > ul > li:hover,
+        #access div > ul > li.current-menu-item,
         #properties-menu  div > ul > li.current-menu-item > a,
         #properties-menu  div > ul > li.current-menu-ancestor > a {
             background-position: 10px -62px;
-            background-color: rgba(255, 255, 255, 0.75);
+            /* background-color: rgba(255, 255, 255, 0.75); */
         }
 
-        #access div > ul > li > a:hover,
-        #access div > ul > li.current-menu-item > a,
-        #access div > ul > li.current-menu-parent > a,
+        #access div > ul > li:hover,
+        #access div > ul > li.current-menu-item,
+        #access div > ul > li.current-menu-parent,
+        #access div > ul > li.current-menu-ancestor,
         #cta-access div > ul > li > a:hover,
         #cta-access div > ul > li.current-menu-item > a,
         #cta-access div > ul > li.current-menu-parent > a,
         #properties-menu div > ul > li > a:hover,
         #properties-menu div > ul > li.current-menu-item > a,
         #properties-menu div > ul > li.current-menu-parent > a {
-            color: white;
+            color: rgb(42, 81, 223);
+            background-color: rgba(255, 255, 255, 0.75);
         }
 
  /* CTA menu */
