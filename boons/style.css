@@ -1,0 +1,830 @@
+/*
+Theme Name:     boons
+Theme URI:      http: //www.boonvillas.co.uk/
+Description:    Theme developed for the needs of Boon Villas, contains templates for homepage, custom taxonomy, custom post type (Villas). It displays the villas with a full window background and details available on click.
+Author:         planXdesign
+Author URI:     http: //www.planxdesign.eu/
+
+Version:        0.4.0
+*/
+
+/* Load fonts from Google Webfonts */
+
+@import url(http://fonts.googleapis.com/css?family=Signika+Negative:300,700);
+
+/* =Reset
+------------------------------------------------------------------------------*/
+html, body, div,
+span, object, iframe,
+ h1, h2, h3, h4, h5, h6,
+ p, a, em, img, strong,
+ b, u, i, dl, dt, dd, ol, ul, li {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+}
+
+div {
+    display: block;
+}
+
+/* Clearing Floats
+--------------------------------------------- */
+.clear {
+    clear:both;
+    display:block;
+    overflow:hidden;
+    visibility:hidden;
+    width:0;
+    height:0;
+}
+.clearfix:after {
+    clear:both;
+    content:' ';
+    display:block;
+    font-size:0;
+    line-height:0;
+    visibility:hidden;
+    width:0;
+    height:0
+}
+
+/* =Typography
+------------------------------------------------------------------------------*/
+
+:focus {
+    outline: 0;
+}
+
+body {
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 62.5%;
+}
+
+b, strong {
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    /* color: #88153E; */
+    -webkit-transition: color 300ms linear;
+    -moz-transition: color 300ms linear;
+    -o-transition: color 300ms linear;
+    transition: color 300ms linear;
+}
+
+a:hover {
+    color: #A6506E;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #A6506E;
+    text-decoration: underline;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+}
+
+h1 {
+    font-size: 2.1em;
+    color: white;
+    line-height: 1.2;
+    text-align: left;
+}
+
+
+/* =Structure
+------------------------------------------------------------------------------*/
+
+body {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: visible;
+    display: block;
+    font-size: 62.5%;
+}
+
+
+/* --- Images --- */
+
+img {
+
+}
+
+img.no-border {
+    border: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.alignleft {
+    display: block;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.alignright {
+    display: block;
+    float: right;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* --- Page --- */
+.page-limit {
+    width: 90%;
+    max-width: 940px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+/* ========================================
+/* = Controls
+/* ======================================== */
+
+    #controls {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 10.9375%;
+        width: 15.625%;
+        height: 100%;
+       /* background: red;*/
+    }
+
+    #branding {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 32.39741%;
+    }
+
+    .gradient {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        filter:alpha(opacity=80);
+
+        background: rgb(9,73,155); /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDk0OTliIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI2MjI2MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+        background: -moz-linear-gradient(-45deg,  rgb(9,73,155) 0%, rgb(38,34,97) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgb(9,73,155)), color-stop(100%,rgb(38,34,97))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  rgb(9,73,155) 0%,rgb(38,34,97) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  rgb(9,73,155) 0%,rgb(38,34,97) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  rgb(9,73,155) 0%,rgb(38,34,97) 100%); /* IE10+ */
+        background: linear-gradient(135deg,  rgb(9,73,155) 0%,rgb(38,34,97) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09499b', endColorstr='#262261',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+    }
+
+    #branding img#logo {
+        position: absolute;
+        bottom: 10.58201%;
+        left: 50%;
+        margin-left: -30px;
+        width: 60px;
+        height: 141px;
+    }
+
+    #navigation {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 65.33477%;
+    }
+
+    /* Menu Styling */
+
+        #access {
+            /* position: absolute; */
+            position: relative;
+            margin-top: 15%;
+            display: block;
+            /* top: 5.16529%; */
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        #access ul,
+        #cta ul,
+        #properties-menu ul {
+            list-style: none;
+        }
+
+        #access div > ul > li > a,
+        #cta-access div > ul > li > a,
+        #properties-menu  div > ul > li > a {
+            text-align: center;
+            display: block;
+            width: 100%;
+            line-height: 1.5;
+            font-size: 2.1em;
+            color: #CCC;
+            text-decoration: none;
+            margin: 1.65289% 0;
+        }
+
+        #access div > ul > li > a,
+        #properties-menu  div > ul > li > a {
+            padding: 0 1em;
+            box-sizing: border-box;
+            background: transparent;
+            background-image: url('images/arrow-sprite.png');
+            background-repeat: no-repeat;
+            background-position: 10px 0px;
+        }
+
+        #access div > ul > li.current-menu-item > a,
+        #properties-menu  div > ul > li.current-menu-item > a,
+        #properties-menu  div > ul > li.current-menu-ancestor > a {
+            background-position: 10px -62px;
+        }
+
+        #access div > ul > li > a:hover,
+        #access div > ul > li.current-menu-item > a,
+        #access div > ul > li.current-menu-parent > a,
+        #cta-access div > ul > li > a:hover,
+        #cta-access div > ul > li.current-menu-item > a,
+        #cta-access div > ul > li.current-menu-parent > a,
+        #properties-menu div > ul > li > a:hover,
+        #properties-menu div > ul > li.current-menu-item > a,
+        #properties-menu div > ul > li.current-menu-parent > a {
+            color: white;
+        }
+
+ /* CTA menu */
+    #cta {
+        /* position: absolute; */
+        position: relative;
+        margin-top: 15%;
+        width: 100%;
+        height: auto;
+        /* top: 52%; */
+    }
+
+ /* properties menu */
+
+    #properties-menu {
+        /* position: absolute; */
+        position: relative;
+        margin-top: 15%;
+        width: 100%;
+        height:auto;
+        /* top: 60%; */
+    }
+
+    /* Second level menu */
+
+     #access ul > li > ul,
+     #properties-menu ul > li > ul {
+        display: none;
+        opacity: 0;
+
+        -webkit-transition: opacity 300ms linear;
+        -moz-transition: opacity 300ms linear;
+        -o-transition: opacity 300ms linear;
+        transition: opacity 300ms linear;
+     }
+
+     #access ul > li.current-menu-item ul,
+     #properties-menu ul > li.current-menu-item ul,
+     #properties-menu ul > li.current-menu-ancestor ul {
+        display: block;
+        opacity: 1;
+     }
+
+     /* #access ul li:hover ul {
+        display: block;
+        opacity: 1;
+     } */
+
+     #access ul ul > li > a,
+     #properties-menu  ul ul > li > a {
+        text-align: center;
+        display: block;
+        width: 100%;
+        line-height: 1.5;
+        font-size: 1.4em;
+        color: rgb(42, 81, 223);
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.5);
+
+        -webkit-transition: background 300ms linear;
+        -moz-transition: background 300ms linear;
+        -o-transition: background 300ms linear;
+        transition: background 300ms linear;
+     }
+
+     #access ul ul > li.current-menu-item > a,
+     #access ul ul > li > a:hover,
+     #properties-menu  ul ul > li.current-menu-item > a,
+     #properties-menu  ul ul > li > a:hover {
+        background: rgba(255, 255, 255, 1);
+     }
+
+    /* Language Selector */
+
+    #language-selector {
+        position: absolute;
+        top: 11%;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 5px 0;
+    }
+
+    #language-selector ul {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        width: 41px;
+    }
+
+    #language-selector ul li {
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+
+    #language-selector ul li:last-child {
+        margin-right: 0;
+    }
+
+
+/* ========================================
+/* = Content Area
+/* ======================================== */
+
+ #content {
+    position: absolute;
+    width: 56.25%;
+    left: 30.46875%;
+    top: 16.1987041036717%;
+    bottom: 16.1987041036717%;
+    height: auto;
+ }
+
+ #content .dark-side,
+ #content-villas .dark-side {
+    background: rgba(34,34,34,0.8);
+ }
+
+ #content-villas #text-content .dark-side {
+    margin-top: 0px;
+ }
+
+ #content-villas #text-content p {
+    padding: 0;
+ }
+
+ .page-template-default .the-content {
+    padding: 10px;
+ }
+
+ div.the-content p {
+    font-size: 1.6em;
+    line-height: 1.5;
+    padding: 0 0 .75em;
+ }
+
+
+ .the-content ul,
+ .the-content ol {
+    list-style-position: outside;
+    padding-left: 35px;
+ }
+
+ .the-content ol li,
+ .the-content ul li {
+    font-size: 1.6em;
+    line-height: 1.5;
+ }
+
+ img.wp-post-image {
+    margin-top: 0;
+ }
+
+ #content h1.entry-title {
+    padding: 10px;
+ }
+
+ /* Slidedeck Super Simple */
+
+ .the-content .slidedeck_frame ul {
+    list-style: none;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: .5em;
+ }
+
+ #accordion .the-content .slidedeck_frame p {
+    padding: 0;
+    text-align: justify;
+ }
+
+ #accordion .skin-super-simple dl.slidedeck > dd {
+    margin-top: 25px !important;
+    padding-left: 0 !important;
+ }
+
+  #accordion .skin-super-simple,
+  #accordion .skin-super-simple dl.slidedeck > dd,
+  #accordion .skin-super-simple .slidedeckFooter {
+    background: transparent !important;
+  }
+
+  #accordion .skin-super-simple {
+    margin-bottom: 0;
+  }
+
+  #accordion .skin-super-simple .slidedeckFooter {
+    border-top: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    z-index: 100;
+ }
+
+  #accordion .skin-super-simple .slidedeckFooter a {
+    border-radius: 0;
+  }
+
+  #accordion .slideTitle {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+
+ /* Navigation bellow  Slidedeck*/
+
+ nav#nav-below {
+    font-size: 1.8em;
+    height: auto;
+    display: block;
+    position: relative;
+    overflow: hidden;
+ }
+
+ div.nav-prev {
+    float: left;
+ }
+
+ div.nav-next {
+    float: right;
+ }
+
+
+/* ========================== */
+/* Accordion                  */
+/* ========================== */
+
+ div#accordion { border-bottom: 1px solid #000E2E; }
+
+ #accordion h1.acc-header {
+
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    border-top: 1px solid rgb(102, 102, 102);
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+
+ #accordion h1.acc-header.ui-state-active {
+    border-bottom: 0;
+ }
+
+ #accordion section {
+    position: relative;
+    margin-top: 2px;
+ }
+
+ #accordion h1.acc-header a {
+    color: white;
+    text-decoration: none;
+ }
+  #accordion .ui-accordion-content {
+    padding: 10px;
+  }
+
+ #accordion p {
+   /*  padding: 10px; */
+ }
+
+ /* Table Properties For Sale */
+    #content table td {
+        text-align: center;
+    }
+
+    #accordion p.wp-caption-text {
+        padding: 0 0 10px 0;
+    }
+
+ /* Table Reloaded */
+
+     #content .wp-table-reloaded {
+        text-align: center;
+        border-collapse: collapse;
+        border-spacing: 0;
+        background-color: transparent;
+        margin: 0;
+        font-size: 8pt;
+        width: 100%;
+        box-sizing: border-box;
+     }
+     #content .wp-table-reloaded td {
+        color: #CCC;
+        padding: 0;
+        background-color: transparent;
+        vertical-align: top;
+     }
+
+     #content .wp-table-reloaded p {
+        padding: 0;
+     }
+
+ /* WPCF7 Contact Form */
+    #content .wpcf7 td input,
+    #content .wpcf7 td textarea {
+        font-size: 1.6em;
+        width: 100%;
+        padding: 5px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        background: rgba(34, 34, 34, 0.6);
+        border: 1px solid #666;
+        color: #CCC;
+    }
+
+    #content .wpcf7 td input[type=submit] {
+        background-color: rgba(48, 48, 48, 0.6);
+        width: 30%;
+        cursor: pointer;
+        -webkit-transition: background-color 450ms;
+        -moz-transition: background-color 450ms;
+        -o-transition: background-color 450ms;
+        -ms-transition: background-color 450ms;
+        transition: background-color 450ms;
+    }
+
+    #content .wpcf7 td input[type=submit]:hover {
+        background-color: rgba(68, 68, 68, 0.9);
+    }
+
+    #content div.wpcf7 .watermark {
+        color: #888;
+    }
+
+    #content .wpcf7-response-output {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    #content span.wpcf7-not-valid-tip {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 100;
+        background: rgba(255, 34, 34, 0.3);
+        border: 1px solid red;
+        font-size: 1em;
+        width: 150px;
+        padding: 2px;
+        margin-left: -75px;
+        margin-top: -12px;
+    }
+
+/* =========================== */
+/* The Background Image        */
+/* =========================== */
+
+ body #wrap,
+ body section.type-villa {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: visible;
+
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+ }
+
+
+/* =========================== */
+/* Content Villas              */
+/* =========================== */
+
+ #content-villas .villa {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+ }
+
+ #content-villas #text-content {
+    position: absolute;
+    bottom: 10%;
+    left: 30.46875%;
+    right: 13.28125%;
+    overflow: visible;
+    height: auto;
+    width: auto;
+ }
+ #content-villas #text-content h1 {
+    padding: 0px;
+    line-height: 1.4em;
+ }
+
+ #content-villas #text-content h1 span,
+ #content-villas #text-content .the-content p span {
+    padding: 2px;
+ }
+
+
+/* ===========================
+ * =  Details Navigation     =
+ * =========================== */
+
+ #content-villas div#details-control {
+    position: absolute;
+    top: 0;
+    right: 13.28125%;
+    width: 40%;
+    height: 32px;
+ }
+
+ #content-villas #details-window {
+    position: absolute;
+    top: 32px;
+    right: 13.28125%;
+    width: 56.7125%;
+    /* height: 47.5161987041037%; */
+    padding: 0 10px 10px;
+    box-sizing: border-box;
+ }
+
+
+
+ #details-control button#detail-on {
+    background: rgba(34, 34, 34, 0.8);
+    border: 0;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    width: 68.42105%;
+    max-width: 260px;
+    height: 32px;
+    right: 0;
+    font-size: 1.4em;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #AAA;
+    transition: color 300ms;
+    -moz-transition: color 300ms; /* Firefox 4 */
+    -webkit-transition: color 300ms; /* Safari and Chrome */
+    -o-transition: color 300ms; /* Opera */
+ }
+
+ #details-control button#detail-on:hover {
+    color: #FFF;
+ }
+
+ #details-control nav#nav-villas {
+    position: absolute;
+    width: 31.57895%;
+    height: 32px;
+ }
+
+ #details-control nav#nav-villas div {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 32px;
+    margin-right: 10px;
+ }
+
+  #details-control nav#nav-villas div a {
+    display: block;
+    background-color: rgba(34, 34, 34, 0.8);
+    width: 100%;
+    height: 100%;
+ }
+
+ #details-control nav#nav-villas div a img {
+    width: 100%;
+    height: auto;
+    opacity: 0.4;
+    transition: opacity 300ms;
+    -moz-transition: opacity 300ms; /* Firefox 4 */
+    -webkit-transition: opacity 300ms; /* Safari and Chrome */
+    -o-transition: opacity 300ms; /* Opera */
+ }
+
+ #details-control nav#nav-villas div a:hover img {
+    opacity: 1;
+ }
+
+ /* NextGen in details */
+ #details-window .ngg-galleryoverview {
+    margin: 0;
+ }
+
+ #details-window .ngg-gallery-thumbnail {
+    margin: 0;
+ }
+
+ #details-window .ngg-gallery-thumbnail img {
+    padding: 0;
+    margin: 10px 0 0 11px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+ }
+
+ #details-window .ngg-gallery-thumbnail-box {
+    width: 49.15014%;
+    height: auto;
+ }
+
+ #details-window .ngg-gallery-thumbnail-box:nth-child(odd) img {
+    margin-left: 0;
+ }
+
+@media screen and (max-width: 1024px) { /* iPad landscape */
+
+ #content {
+    left: 30.46875%;
+    top: 5%;
+    bottom: 5%;
+    height: auto;
+ }
+
+ } /* end of 1024px media query */
+
+
+@media screen and (max-width: 880px) { /* iPad portrait */
+
+/* Structure */
+ #content {
+    width: 61.25%;
+ }
+
+/* Navigation */
+ #controls {
+    left: 7.9375%;
+    width: 19.625%;
+ }
+
+/* Slidedeck adjustments */
+ #accordion p {
+    font-size: 1.4em;
+    line-height: 1.6;
+ }
+
+ #accordion .skin-super-simple dl.slidedeck {
+    height: 450px !important;
+ }
+
+ #accordion .skin-super-simple dl.slidedeck > dd {
+    height: 450px !important;
+ }
+
+ } /* end of iPad portrait */
