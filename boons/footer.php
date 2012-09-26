@@ -57,6 +57,9 @@
 		});
 
 		// Simple Slider for details window
+		var slidesOptions = {
+			container: "ngg-galleryoverview"
+		}
 
 		$('#details-window').slides();
 
