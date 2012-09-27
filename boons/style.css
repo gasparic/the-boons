@@ -236,7 +236,8 @@ Version:        0.4.1
             list-style: none;
         }
 
-        #access div > ul > li {
+        #access div > ul > li,
+        #properties-menu div > ul > li {
             position: relative;
         }
 
@@ -273,8 +274,9 @@ Version:        0.4.1
 
         #access div > ul > li:hover,
         #access div > ul > li.current-menu-item,
-        #properties-menu  div > ul > li.current-menu-item > a,
-        #properties-menu  div > ul > li.current-menu-ancestor > a {
+        #properties-menu  div > ul > li:hover,
+        #properties-menu  div > ul > li.current-menu-item,
+        #properties-menu  div > ul > li.current-menu-ancestor {
             background-position: 10px -62px;
             /* background-color: rgba(255, 255, 255, 0.75); */
         }
@@ -339,8 +341,7 @@ Version:        0.4.1
      }
 
      #access ul > li:hover ul,
-     #properties-menu ul > li:hover ul,
-     /* #properties-menu ul > li.current-menu-ancestor ul */{
+     #properties-menu ul > li:hover ul {
         display: block;
         opacity: 1;
      }
