@@ -60,20 +60,17 @@
 
 		$('.ngg-clear').remove(); //get rid off the clearing div from NGG
 
-		var slidesOptions = {
+		var slidesOptions = { // configure options for SlidesJS
 			container: "ngg-galleryoverview",
 			preload: true,
 			preloadImage: '<?php bloginfo('stylesheet_directory'); ?>/images/loading.gif',
-			play: false,
-			pause: 250,
+			play: 5000,
+			pause: 2500,
 			hoverPause: true,
 			autoHeight: true,
 			generateNextPrev: true
 		}
-
-
 			$('#details-window').slides(slidesOptions);
-
 
 	})(jQuery);
 </script>

@@ -339,8 +339,8 @@ Version:        0.4.1
      }
 
      #access ul > li:hover ul,
-     #properties-menu ul > li.current-menu-item ul,
-     #properties-menu ul > li.current-menu-ancestor ul {
+     #properties-menu ul > li:hover ul,
+     /* #properties-menu ul > li.current-menu-ancestor ul */{
         display: block;
         opacity: 1;
      }
@@ -800,11 +800,12 @@ Version:        0.4.1
 
  #details-window .ngg-gallery-thumbnail img {
     padding: 0;
-    margin: 10px 0 0 11px;
+    margin: 0;
     width: 100%;
     max-width: 100%;
     min-width: 100%;
     height: auto;
+    border: 0;
  }
 
  #details-window .ngg-gallery-thumbnail-box {
@@ -812,11 +813,7 @@ Version:        0.4.1
     height: auto;
  }
 
- #details-window .ngg-gallery-thumbnail-box:nth-child(odd) img {
-    margin-left: 0;
- }
-
-    /* Slidesjs in details */
+    /* Slidesjs in Details */
 
         /*
             Slides container
@@ -825,15 +822,16 @@ Version:        0.4.1
             Set to display none, prevents content flash
         */
 
-        .slides_container {
-            width:706px;
-            overflow:hidden;
-            position:relative;
-            display:none;
-        }
+     #details-window .ngg-galleryoverview {
+        width:706px;
+        overflow:hidden;
+        position:relative;
+        display:none;
+     }
      #details-window .ngg-galleryoverview {
         width:706px;
         height:397px;
+        margin-top: 10px;
      }
 
         /*
@@ -858,18 +856,24 @@ Version:        0.4.1
             Next/prev buttons
         */
 
-        #details-window .next,##details-window .prev {
+        #details-window .next, #details-window .prev {
             position:absolute;
-            top:107px;
-            left:-39px;
+            top:190px;
+            left: -14px;
             width:24px;
             height:43px;
             display:block;
             z-index:101;
         }
 
+        #details-window .prev {
+            text-indent: -9999em;
+            background: url('images/arrow-prev.png') no-repeat center center;
+        }
         #details-window .next {
-            left:585px;
+            left:716px;
+            text-indent: -9999em;
+            background: url('images/arrow-next.png') no-repeat center center;
         }
 
         /*
@@ -877,7 +881,7 @@ Version:        0.4.1
         */
 
         .pagination {
-            margin:26px auto 0;
+            margin: 10px auto;
             width:100px;
         }
 
