@@ -86,7 +86,7 @@ Version:        0.4.1
     }
 
     a:visited {
-        color: #FFF;
+        color: #BBB;
         text-decoration: underline;
     }
 
@@ -654,6 +654,13 @@ Version:        0.4.1
 
  ul.tabs-ul {
     list-style: none;
+    padding-left: 0;
+ }
+
+ div#tabs div#tabs-1.ui-widget-content {
+    background-image: url('images/sole-agency-logo.png');
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
  }
 
 
