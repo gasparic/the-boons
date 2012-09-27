@@ -24,6 +24,7 @@
 <![endif]-->
 <?php 	wp_enqueue_script("jquery");
 		wp_enqueue_script("jquery-ui-accordion");
+		wp_enqueue_script("jquery-ui-tabs");
 	 	wp_enqueue_script("slides-jquery",
 						get_template_directory_uri() . '/js/slides.min.jquery.js',
 						array('jquery')

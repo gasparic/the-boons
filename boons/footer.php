@@ -64,13 +64,17 @@
 			container: "ngg-galleryoverview",
 			preload: true,
 			preloadImage: '<?php bloginfo('stylesheet_directory'); ?>/images/loading.gif',
-			play: 5000,
+			play: 0,
 			pause: 2500,
 			hoverPause: true,
 			autoHeight: true,
 			generateNextPrev: true
 		}
 			$('#details-window').slides(slidesOptions);
+
+		// jQuery UI Tabs for Properties For Sale page
+
+		$( '#tabs' ).tabs();
 
 	})(jQuery);
 </script>
