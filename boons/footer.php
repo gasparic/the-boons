@@ -57,11 +57,22 @@
 		});
 
 		// Simple Slider for details window
+
+		$('.ngg-clear').remove(); //get rid off the clearing div from NGG
+
 		var slidesOptions = {
-			container: "ngg-galleryoverview"
+			container: "ngg-galleryoverview",
+			preload: true,
+			preloadImage: '<?php bloginfo('stylesheet_directory'); ?>/images/loading.gif',
+			play: false,
+			pause: 250,
+			hoverPause: true,
+			autoHeight: true,
+			generateNextPrev: true
 		}
 
-		$('#details-window').slides();
+
+			$('#details-window').slides(slidesOptions);
 
 
 	})(jQuery);

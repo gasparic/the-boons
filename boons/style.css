@@ -707,7 +707,7 @@ Version:        0.4.1
 
 
 /* =========================== */
-/* =  Details Navigation     = */
+/* =  Details                = */
 /* =========================== */
 
  #content-villas div#details-control {
@@ -815,6 +815,92 @@ Version:        0.4.1
  #details-window .ngg-gallery-thumbnail-box:nth-child(odd) img {
     margin-left: 0;
  }
+
+    /* Slidesjs in details */
+
+        /*
+            Slides container
+            Important:
+            Set the width of your slides container
+            Set to display none, prevents content flash
+        */
+
+        .slides_container {
+            width:706px;
+            overflow:hidden;
+            position:relative;
+            display:none;
+        }
+     #details-window .ngg-galleryoverview {
+        width:706px;
+        height:397px;
+     }
+
+        /*
+            Each slide
+            Important:
+            Set the width of your slides
+            If height not specified height will be set by the slide content
+            Set to display block
+        */
+
+     #details-window .ngg-galleryoverview div {
+        width:706px;
+        height:397px;
+        display:block;
+     }
+
+     #details-window .ngg-galleryoverview div img {
+        display:block;
+     }
+
+        /*
+            Next/prev buttons
+        */
+
+        #details-window .next,##details-window .prev {
+            position:absolute;
+            top:107px;
+            left:-39px;
+            width:24px;
+            height:43px;
+            display:block;
+            z-index:101;
+        }
+
+        #details-window .next {
+            left:585px;
+        }
+
+        /*
+            Pagination
+        */
+
+        .pagination {
+            margin:26px auto 0;
+            width:100px;
+        }
+
+        .pagination li {
+            float:left;
+            margin:0 1px;
+            list-style:none;
+        }
+
+        .pagination li a {
+            display:block;
+            width:12px;
+            height:0;
+            padding-top:12px;
+            background-image:url('images/pagination.png');
+            background-position:0 0;
+            float:left;
+            overflow:hidden;
+        }
+
+        .pagination li.current a {
+            background-position:0 -12px;
+        }
 
 
 /* =========================== */
