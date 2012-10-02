@@ -96,7 +96,7 @@ $locale_file = get_template_directory() . "/languages/$locale.php";
 	    'show_ui'                       => true,
 	    'show_in_nav_menus'             => true,
 	    'args'                          => array( 'orderby' => 'term_order' ),
-	    'rewrite'                       => array( 'slug' => 'villas/brackets', 'with_front' => false ),
+	    'rewrite'                       => array( 'slug' => 'villas', 'with_front' => true, 'hierarchical' => true ),
 	    'query_var'                     => true
 	);
 
@@ -132,7 +132,7 @@ $locale_file = get_template_directory() . "/languages/$locale.php";
 			'show_ui' => true,
 			'query_var' => true,
 			'has_archive' => true,
-			'rewrite' => array( 'slug' => 'villas'),
+			'rewrite' => array( 'slug' => 'villas', 'with_front' => true ),
 			'capability_type' => 'post',
 			'menu_position' => 6,
 			'supports' => array('title', 'excerpt', 'editor','thumbnail')

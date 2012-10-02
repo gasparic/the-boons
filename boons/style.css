@@ -838,6 +838,11 @@ Version:        0.4.1
     padding: 2px;
  }
 
+ /* Sole Agency Villas - display SA logo, next to content */
+
+  #content .the-content.sole-agency {
+    background: url('images/sole-agency.png') no-repeat 0 0;
+  }
 
 /* =========================== */
 /* =  Details                = */
@@ -1015,13 +1020,15 @@ Version:        0.4.1
 
         .pagination {
             margin: 10px auto;
-            width:200px;
+            width: 180px;
+            display: table;
         }
 
         .pagination li {
-            float:left;
-            margin:0 1px;
+            /* float:left;
+            margin:0 1px; */
             list-style:none;
+            display: table-cell;
         }
 
         .pagination li a {

@@ -23,20 +23,43 @@
 			?>
 
 			<section <?php post_class('clearfix'); ?> style="background-image: url(<?php echo $src[0]; ?>);">
+
+			<?php // Does permalink of the post contain 'sole-agency'?
+				$villa_permalink = preg_match( '~sole\-agency~', get_permalink( $post->ID ) );
+				echo get_permalink( $post->ID );
+				echo $villa_permalink;
+
+			$term = get_term_by( 'slug', get_query_var( '700-900-sole-agency' ), get_query_var( 'villa_categories' ) );
+			if ( $term -> parent > 0 ) {echo 'sole-taxonomy';}
+			echo $term->parent;
+
+				if ( is_tax('villa_categories','sole-agency') === true ) {echo 'sole';} else { echo 'joint';}
+
+
+				if ( $villa_permalink === 0 ) { // if not, do as normal
+			?>
+
 				<div id="text-content">
 						<h1 class="entry-title acc-header"><span class="dark-side"><?php the_title(); ?></span></h1>
 						<div class="the-content">
-						<? /*php
-							$page_ID = $page -> ID;
-							 $before = '<p><span class="price dark-side">Price bracket: ';
-							 $sep = ', ';
-							 $after = '</span></p>';
-							 $ters_a = get_the_term_list( $post->ID, 'villa_categories', $before, $sep, $after );
-							$terms_as_text = strip_tags ($ters_a, '<p><span>');
-							_e( $terms_as_text, 'boons');*/
+						<?php
 							$excerpt = get_the_excerpt();
 						?>
 						<p><span class="dark-side"><?php _e( $excerpt, 'boons' ); ?></span></p>
+
+						<?php
+							} else { // Permalink does contain sole-agency -> display logo
+						?>
+				<div id="text-content sole-agency">
+								<h1 class="entry-title acc-header"><span class="dark-side"><?php the_title(); ?></span></h1>
+								<div class="the-content">
+								<?php
+									$excerpt = get_the_excerpt();
+								?>
+								<p><span class="dark-side"><?php _e( $excerpt, 'boons' ); ?></span></p>
+						<?php
+							} //end of if-else permalink
+						?>
 						</div><!-- end #the-content-->
 				</div><!-- #text-content -->
 			</section>
