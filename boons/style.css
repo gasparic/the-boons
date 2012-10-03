@@ -831,6 +831,7 @@ Version:        0.4.1
  #content-villas #text-content h1 {
     padding: 0px;
     line-height: 1.4em;
+    overflow: hidden;
  }
 
  #content-villas #text-content h1 span,
@@ -840,8 +841,41 @@ Version:        0.4.1
 
  /* Sole Agency Villas - display SA logo, next to content */
 
-  #content .the-content.sole-agency {
-    background: url('images/sole-agency.png') no-repeat 0 0;
+  #text-content #sole-agency-logo {
+    position: absolute;
+    height: 100%;
+    background: red;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    display: none;
+  }
+
+  #text-content #sole-agency-logo div.sa-wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  #text-content #sole-agency-logo .sa-wrap img {
+    display: block;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 29px;
+    height: 34px;
+    left: 0;
+  }
+
+  #text-content h1.entry-title,
+  #text-content div.the-content {
+   /*  margin-left: 29px; /* move #text-content>h1+.the-content out SA logo way */
   }
 
 /* =========================== */

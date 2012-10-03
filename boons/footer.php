@@ -73,8 +73,15 @@
 			$('#details-window').slides(slidesOptions);
 
 		// jQuery UI Tabs for Properties For Sale page
-
 		$( '#tabs' ).tabs();
+
+		// Sole Agency badge
+		var sole_string = $('body').attr('class');
+		console.log (sole_string);
+		if ( sole_string.indexOf('sole-agency') !== -1 ) { // if body class contains 'sole-agency'
+			$('#sole-agency-logo').css('display', 'block');
+			$('#text-content h1.entry-title, #text-content .the-content').css('margin-left', '29px' );
+		}
 
 	})(jQuery);
 </script>
