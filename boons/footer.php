@@ -56,6 +56,8 @@
 			});
 		});
 
+
+
 		// Simple Slider for details window
 
 		$('.ngg-clear').remove(); //get rid off the clearing div from NGG
@@ -72,6 +74,26 @@
 		}
 			$('#details-window').slides(slidesOptions);
 
+		// resize Details images
+
+		    updateContainer();
+		    $(window).resize(function() {
+		        updateContainer();
+		    });
+
+			function updateContainer() {
+				var aspectRatio = 706 / 397;
+			    var newWidth = $('#details-window').width();
+			    var	newHeight = Math.round(newWidth / aspectRatio);
+			    var newNext = newWidth + 10;
+
+			    $('#details-window .next').css( 'left', newNext );
+			    $('#details-window .slides_control').css( 'left', newWidth );
+			    $('#details-window .ngg-galleryoverview').css( 'width', newWidth );
+			    $('#details-window .ngg-gallery-thumbnail-box').css( 'width', newWidth );
+			}
+
+
 		// jQuery UI Tabs for Properties For Sale page
 		$( '#tabs' ).tabs();
 
@@ -82,6 +104,7 @@
 			$('#sole-agency-logo').css('display', 'block');
 			$('#text-content h1.entry-title, #text-content .the-content').css('margin-left', '29px' );
 		}
+
 
 	})(jQuery);
 </script>

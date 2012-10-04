@@ -1093,7 +1093,11 @@ Version:        0.4.1
     bottom: 5%;
     height: auto;
  }
-
+/*
+ #content-villas #details-window {
+    width: 546px;
+ }
+*/
  } /* end of 1024px media query */
 
 
