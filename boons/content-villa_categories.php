@@ -54,7 +54,7 @@
 									next_posts_link('<img src='.$placeholder.' width="50" height="32" />'); ?>
 								</div>
 								<div id="nav-label">
-									Properties
+									Property
 								</div>
 								<div id="nav-next">
 									<?php
