@@ -928,7 +928,7 @@ Version:        0.4.1
 
  #details-control nav#nav-villas {
     position: absolute;
-    width: 31.57895%;
+    width: 50%;
     height: 32px;
  }
 
@@ -959,6 +959,16 @@ Version:        0.4.1
 
  #details-control nav#nav-villas div a:hover img {
     opacity: 1;
+ }
+
+ #details-control nav#nav-villas div#nav-label {
+    background: rgba(34, 34, 34, 0.8);
+    text-align: center;
+    font-size: 1.8em;
+    width: auto;
+    line-height: 1.8;
+    padding: 0 10px;
+    color: #CCC;
  }
 
  /* NextGen in details */
@@ -1093,11 +1103,15 @@ Version:        0.4.1
     bottom: 5%;
     height: auto;
  }
-/*
- #content-villas #details-window {
-    width: 546px;
+
+ #content-villas div#details-control {
+    width: 50%;
+}
+
+ #details-control nav#nav-villas {
+    width: 60%;
  }
-*/
+
  } /* end of 1024px media query */
 
 
@@ -1116,6 +1130,14 @@ Version:        0.4.1
     left: 7.9375%;
     width: 19.625%;
   }
+
+   #details-control nav#nav-villas {
+    width: 60%;
+ }
+
+ #details-control button#detail-on {
+    width: 40%;
+ }
 
  /* Slidedeck adjustments */
   #accordion p {

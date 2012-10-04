@@ -53,6 +53,9 @@
 									$placeholder = get_bloginfo('stylesheet_directory').'/images/details-nav-previous.png';
 									next_posts_link('<img src='.$placeholder.' width="50" height="32" />'); ?>
 								</div>
+								<div id="nav-label">
+									Properties
+								</div>
 								<div id="nav-next">
 									<?php
 									$placeholder = get_bloginfo('stylesheet_directory').'/images/details-nav-next.png';
