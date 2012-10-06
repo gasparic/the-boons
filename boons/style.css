@@ -419,6 +419,8 @@ Version:        0.4.1
     left: 30.46875%;
     top: 16.1987041036717%;
     bottom: 16.1987041036717%;
+    top: 10%;
+    bottom: 10%;
     height: auto;
  }
 
@@ -705,6 +707,7 @@ Version:        0.4.1
  #accordion p {
    /*  padding: 10px; */
  }
+
 
  /* Table Properties For Sale */
     #content table td {
