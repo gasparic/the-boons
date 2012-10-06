@@ -23,9 +23,9 @@
 			$content = apply_filters( 'the_content', $content );
 		?>
 		<section <?php post_class('clearfix'); ?>>
-				<h1 class="entry-title acc-header dark-side"><a href="#<?php echo $page_ID;?>" id="<?php echo $page_ID;?>"><?php _e( $page->post_title, 'boons'); ?></a></h1>
+				<h1 class="entry-title acc-header dark-side"><a href="#<?php echo $page_ID;?>" id="<?php echo $page_ID;?>"><?php echo $page->post_title; ?></a></h1>
 				<div class="the-content dark-side">
-					<?php _e( $content, 'boons'); ?>
+					<?php echo $content; ?>
 				</div><!-- .the-content -->
 		</section>
 

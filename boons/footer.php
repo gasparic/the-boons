@@ -31,7 +31,7 @@
 			    navigation: true,
 			    event: 'click',
 			    fillSpace: false,
-			    animated: 'easeslide',
+			    animated: 'easesslide',
 			    collapsible: true,
 			    allwayOpen: false
 			};
@@ -48,13 +48,16 @@
 			$(collapse_content_selector).toggle(function(){
 			  if($(this).css('display')=='none'){
                                 //change the button label to be 'Show'
-				toggle_switch.html('Show Details');
+				toggle_switch.html("<?php _e('Show Details', 'boons'); ?>");
 			  }else{
                                 //change the button label to be 'Hide'
-				toggle_switch.html('Hide Details');
+				toggle_switch.html("<?php _e('Hide Details', 'boons'); ?>");
 			  }
 			});
 		});
+
+		var property_int = "<?php _e('Show Details', 'boons'); ?>";
+		console.log(property_int);
 
 
 

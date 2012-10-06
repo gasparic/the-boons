@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: boons v0.1.0\n"
+"Project-Id-Version: boons v0.4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2012-09-11 20:27:19+0000\n"
+"PO-Revision-Date: 2012-10-06 01:21:48+0000\n"
 "Last-Translator: planxdesign <info@planxdesign.eu>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,71 +19,30 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: functions.php:48
+#: content-villa_categories.php:54
 #@ boons
-msgid "Primary Navigation"
-msgstr ""
+msgid "Property"
+msgstr "Property"
 
-#: functions.php:111
-#@ default
-msgctxt "boons"
-msgid "Villas"
-msgstr ""
-
-#: functions.php:112
-#@ default
-msgctxt "boons"
-msgid "Villa"
-msgstr ""
-
-#: functions.php:113
-#@ default
-msgctxt "villa item"
-msgid "Add New"
-msgstr ""
-
-#: functions.php:114
+#: content-villa_categories.php:63
+#: footer.php:51
+#: footer.php:59
 #@ boons
-msgid "Add New Villa"
-msgstr ""
+msgid "Show Details"
+msgstr "Show Details"
 
-#: functions.php:115
+#: footer.php:54
 #@ boons
-msgid "Edit Villa"
-msgstr ""
-
-#: functions.php:116
-#@ boons
-msgid "New Villa"
-msgstr ""
-
-#: functions.php:117
-#@ boons
-msgid "View Villa"
-msgstr ""
-
-#: functions.php:118
-#@ boons
-msgid "Search Villas"
-msgstr ""
-
-#: functions.php:119
-#@ boons
-msgid "Nothing found"
-msgstr ""
-
-#: functions.php:120
-#@ boons
-msgid "Nothing found in Trash"
-msgstr ""
+msgid "Hide Details"
+msgstr "Hide Details"
 
 #: index.php:23
 #@ boons
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgid "Older posts"
+msgstr "Older posts"
 
 #: index.php:24
 #@ boons
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgid "Newer posts"
+msgstr "Newer posts"
 

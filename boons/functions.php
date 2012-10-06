@@ -45,9 +45,9 @@ $locale_file = get_template_directory() . "/languages/$locale.php";
 
  		//This theme uses wp_nav_menu() in one location
  		register_nav_menus( array(
- 			'primary' => __( 'Primary Navigation', 'boons' ),
- 			'contact' => __( 'Contact Menu', 'boons'),
- 			'properties' => __( 'Properties For Sale', 'boons')
+ 			'primary' => 'Primary Navigation',
+ 			'contact' => 'Contact Menu',
+ 			'properties' => 'Properties For Sale'
  			)
  		);
  	}
@@ -112,16 +112,16 @@ $locale_file = get_template_directory() . "/languages/$locale.php";
 	function villa_register() {
 
 		$labels = array(
-			'name' => _x('Villas', 'boons'),
-			'singular_name' => _x('Villa', 'boons'),
-			'add_new' => _x('Add New', 'villa item'),
-			'add_new_item' => __('Add New Villa', 'boons'),
-			'edit_item' => __('Edit Villa', 'boons'),
-			'new_item' => __('New Villa', 'boons'),
-			'view_item' => __('View Villa', 'boons'),
-			'search_items' => __('Search Villas', 'boons'),
-			'not_found' =>  __('Nothing found', 'boons'),
-			'not_found_in_trash' => __('Nothing found in Trash', 'boons'),
+			'name' => 'Villas',
+			'singular_name' => 'Villa',
+			'add_new' => 'Add New',
+			'add_new_item' => 'Add New Villa',
+			'edit_item' => 'Edit Villa',
+			'new_item' => 'New Villa',
+			'view_item' => 'View Villa',
+			'search_items' => 'Search Villas',
+			'not_found' =>  'Nothing found',
+			'not_found_in_trash' => 'Nothing found in Trash',
 			'parent_item_colon' => ''
 		);
 

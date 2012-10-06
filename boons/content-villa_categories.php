@@ -34,10 +34,7 @@
 						</div> <!-- end #sole-agency-logo -->
 						<h1 class="entry-title acc-header"><span class="dark-side"><?php the_title(); ?></span></h1>
 						<div class="the-content">
-						<?php
-							$excerpt = get_the_excerpt();
-						?>
-						<p><span class="dark-side"><?php _e( $excerpt, 'boons' ); ?></span></p>
+						<p><span class="dark-side"><?php echo get_the_excerpt(); ?></span></p>
 						</div><!-- end #the-content-->
 				</div><!-- #text-content -->
 			</section>
@@ -54,7 +51,7 @@
 									next_posts_link('<img src='.$placeholder.' width="50" height="32" />'); ?>
 								</div>
 								<div id="nav-label">
-									Property
+									<?php _e('Property', 'boons'); ?>
 								</div>
 								<div id="nav-next">
 									<?php
@@ -63,7 +60,7 @@
 								</div>
 							</nav><!-- end nav-below -->
 
-						<button href="#details-window" id="detail-on" class="nav-toggle">Show Details</button> <!-- show/hide details -->
+						<button href="#details-window" id="detail-on" class="nav-toggle"><?php _e('Show Details', 'boons'); ?></button> <!-- show/hide details -->
 					</div><!-- #details-control -->
 					<div id="details-window" class="dark-side" style="display: none;">
 						<?php the_content(); ?>
