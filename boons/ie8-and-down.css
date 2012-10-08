@@ -1,0 +1,40 @@
+/*
+Description:    To satisfy IE8 and lower users
+Author:         planXdesign
+Author URI:     http: //www.planxdesign.eu/
+
+*/
+
+/* Background - filled with image */
+
+ body #wrap,
+ body section.type-villa {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+ @media screen and (max-width: 1024px) { /* Specific to this particular image */
+    body #wrap,
+    body section.type-villa {
+        left: 50%;
+        margin-left: -512px;   /* 50% */
+    }
+ }
+
+ #language-selector ul {
+    width: 46px;
+ }
+
+ #details-control button#detail-on {
+    width: 45%;
+ }
