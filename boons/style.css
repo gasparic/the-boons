@@ -291,6 +291,7 @@ Version:        0.4.1
         #properties-menu div > ul > li.current-menu-item,
         #properties-menu div > ul > li.current-menu-parent {
             color: rgb(42, 81, 223);
+            background-color: rgb(255, 255, 255);
             background-color: rgba(255, 255, 255, 0.85);
         }
 
@@ -298,7 +299,8 @@ Version:        0.4.1
         #cta-access div > ul > li:hover,
         #properties-menu div > ul > li:hover {
             color: rgb(42, 81, 223);
-            background-color: rgba(255, 255, 255, 0.50);
+            background-color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.85);
         }
 
 
@@ -332,7 +334,7 @@ Version:        0.4.1
         position: absolute;
         left: 100%;
         top: 0;
-        width: 80%;
+        width: 100%;
         z-index: 9999;
 
         -webkit-transition: opacity 300ms linear;
@@ -340,6 +342,21 @@ Version:        0.4.1
         -o-transition: opacity 300ms linear;
         transition: opacity 300ms linear;
      }
+
+     #access ul > li > ul > li,
+     #properties-menu ul > li > ul > li {
+      /*  border-bottom: 1px solid #FFF; */
+     }
+
+     #access ul > li > ul > li a,
+     #properties-menu ul > li > ul > li a {
+        padding: 5px;
+    }
+
+     #access ul > li > ul > li:last-child,
+     #properties-menu ul > li > ul > li:last-child {
+        border-bottom: 0;
+    }
 
      #access ul > li:hover ul,
      #properties-menu ul > li:hover ul {
@@ -361,7 +378,8 @@ Version:        0.4.1
         font-size: 1.4em;
         color: rgb(255, 255, 255);
         text-decoration: none;
-        background: rgba(42, 81, 223, 0.85);
+        background: rgb(9,73,155);
+        background: rgba(9, 73, 155, 0.85);
 
         -webkit-transition: background 300ms linear;
         -moz-transition: background 300ms linear;
@@ -373,7 +391,8 @@ Version:        0.4.1
      #access ul ul > li > a:hover,
      #properties-menu  ul ul > li.current-menu-item > a,
      #properties-menu  ul ul > li > a:hover {
-        color: rgb(42, 81, 223);
+        color: rgb(9, 73, 155);
+        background: rgb(255, 255, 255);
         background: rgba(255, 255, 255, 0.85);
      }
 
@@ -385,6 +404,7 @@ Version:        0.4.1
         width: 100%;
         height: auto;
         overflow: visible;
+        background-color: transparent;
         background-color: rgba(255, 255, 255, 0.3);
         padding: 5px 0;
     }
@@ -426,6 +446,7 @@ Version:        0.4.1
 
  #content .dark-side,
  #content-villas .dark-side {
+    background: rgb(34,34,34);
     background: rgba(34,34,34,0.8);
  }
 
@@ -483,7 +504,7 @@ Version:        0.4.1
  }
 
  #accordion .skin-super-simple dl.slidedeck > dd {
-    margin-top: 25px !important;
+    margin-top: 5px !important;
     padding-left: 0 !important;
  }
 
@@ -747,16 +768,19 @@ Version:        0.4.1
         font-size: 1.6em;
         width: 100%;
         padding: 5px;
+        background: rgb(34, 34, 34);
+        background: rgba(34, 34, 34, 0.6);
+        border: 1px solid #666;
+        color: #CCC;
+
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         -ms-box-sizing: border-box;
         box-sizing: border-box;
-        background: rgba(34, 34, 34, 0.6);
-        border: 1px solid #666;
-        color: #CCC;
     }
 
     #content .wpcf7 td input[type=submit] {
+        background-color: rgb(48, 48, 48);
         background-color: rgba(48, 48, 48, 0.6);
         width: 30%;
         cursor: pointer;
@@ -768,6 +792,7 @@ Version:        0.4.1
     }
 
     #content .wpcf7 td input[type=submit]:hover {
+        background-color: rgb(68, 68, 68);
         background-color: rgba(68, 68, 68, 0.9);
     }
 
@@ -785,6 +810,7 @@ Version:        0.4.1
         top: 50%;
         left: 50%;
         z-index: 100;
+        background: rgb(255, 34, 34);
         background: rgba(255, 34, 34, 0.3);
         border: 1px solid red;
         font-size: 1em;
@@ -848,7 +874,7 @@ Version:        0.4.1
   #text-content #sole-agency-logo {
     position: absolute;
     height: 100%;
-    background: red;
+    width: 29px;
     top: 0;
     padding: 0;
     margin: 0;
@@ -907,6 +933,7 @@ Version:        0.4.1
 
 
  #details-control button#detail-on {
+    background: rgb(34, 34, 34);
     background: rgba(34, 34, 34, 0.8);
     border: 0;
     position: absolute;
@@ -946,6 +973,7 @@ Version:        0.4.1
 
   #details-control nav#nav-villas div a {
     display: block;
+    background-color: rgb(34, 34, 34);
     background-color: rgba(34, 34, 34, 0.8);
     width: 100%;
     height: 100%;
@@ -966,6 +994,7 @@ Version:        0.4.1
  }
 
  #details-control nav#nav-villas div#nav-label {
+    background: rgb(34, 34, 34);
     background: rgba(34, 34, 34, 0.8);
     text-align: center;
     font-size: 1.8em;
@@ -1129,15 +1158,26 @@ Version:        0.4.1
     width: 61.25%;
   }
 
+ #content-villas #text-content {
+    bottom: 20%;
+ }
+
  /* Navigation */
+
   #controls {
     left: 7.9375%;
     width: 19.625%;
   }
 
-   #details-control nav#nav-villas {
-    width: 60%;
+ #access div > ul > li > a, #cta-access div > ul > li > a, #properties-menu div > ul > li > a {
+    padding-left: 0.5em;
  }
+
+ #details-control nav#nav-villas {
+    width: 65%;
+    right: 45%;
+ }
+
 
  #details-control button#detail-on {
     width: 40%;

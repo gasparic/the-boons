@@ -15,6 +15,11 @@
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/ie8-and-down.css" />
+<![endif]-->
+
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />

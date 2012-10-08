@@ -29,7 +29,7 @@
 
 						<div id="sole-agency-logo">
 							<div class="sa-wrap">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sa-badge.png" alt="Boon Villas - sole agency logo" width="" height="" />
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sa-badge.png" alt="Boon Villas - sole agency logo" width="29px" height="34px" />
 							</div> <!-- #sa-wrap -->
 						</div> <!-- end #sole-agency-logo -->
 						<h1 class="entry-title acc-header"><span class="dark-side"><?php the_title(); ?></span></h1>
@@ -51,7 +51,7 @@
 									next_posts_link('<img src='.$placeholder.' width="50" height="32" />'); ?>
 								</div>
 								<div id="nav-label">
-									<?php _e('Property', 'boons'); ?>
+									<?php _e('Properties', 'boons'); ?>
 								</div>
 								<div id="nav-next">
 									<?php
