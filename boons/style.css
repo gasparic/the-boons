@@ -1145,6 +1145,33 @@ Version:        0.4.1
     width: 60%;
  }
 
+ #cta {
+    margin-top: 5%;
+ }
+
+ #properties-menu {
+    margin-top: 5%;
+ }
+
+ #access ul > li > ul > li a,
+ #properties-menu ul > li > ul > li a {
+    padding: 2px;
+ }
+
+ #branding img#logo {
+    width: 46px;
+    height: auto;
+    margin-left: -23px;
+ }
+
+ div.the-content p {
+    font-size: 1.4em;
+ }
+
+ h1.ui-accordion-header {
+    font-size: 1.8em;
+ }
+
  } /* end of 1024px media query */
 
 
