@@ -110,6 +110,11 @@
 			$('#text-content h1.entry-title, #text-content .the-content').css('margin-left', '29px' );
 		}
 
+		// Prevent NextGEN gallery to show full size image on click of a thumbnail
+		$('.ngg-gallery-thumbnail a').click(function(event) {
+			event.preventDefault();
+		});
+
 
 	})(jQuery);
 </script>

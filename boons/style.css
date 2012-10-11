@@ -1023,6 +1023,10 @@ Version:        0.4.1
     border: 0;
  }
 
+ #details-window .ngg-gallery-thumbnail a {
+    cursor: default;
+ }
+
  #details-window .ngg-gallery-thumbnail-box {
     width: 49.15014%;
     height: auto;
