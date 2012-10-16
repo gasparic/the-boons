@@ -38,27 +38,7 @@
 		$('#accordion').accordion( accOpt );
 		if ( tabID && tabID > 0 ) { $("#accordion").accordion( 'activate', tabID ); }
 
-		// Toggle Details window
- 		$('.nav-toggle').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
-
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html("<?php _e('Show Details', 'boons'); ?>");
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html("<?php _e('Hide Details', 'boons'); ?>");
-			  }
-			});
-		});
-
-		var property_int = "<?php _e('Show Details', 'boons'); ?>";
-		console.log(property_int);
-
+		updateContainer();
 
 		// Simple Slider for details window
 
@@ -74,14 +54,42 @@
 			autoHeight: true,
 			generateNextPrev: true
 		}
-			$('#details-window').slides(slidesOptions);
+
+		// Toggle Details window
+ 		$('.nav-toggle').click(function(){
+			//get collapse content selector
+			var collapse_content_selector = $(this).attr('href');
+
+			//make the collapse content to be shown or hiden
+			var toggle_switch = $(this);
+			$(collapse_content_selector).toggle(function(){
+			  if($(this).css('display')=='none'){
+                                //change the button label to be 'Show'
+				toggle_switch.html("<?php _e('Show Details', 'boons'); ?>");
+			  }else{
+                                //change the button label to be 'Hide'
+				toggle_switch.html("<?php _e('Hide Details', 'boons'); ?>");
+				// updateContainer();
+				if ( $('.slides_control').length === 0 ) {
+					$('ngg-galleryoverview img').css('display', 'none');
+					$('#details-window').slides(slidesOptions);
+					$('#details-window .ngg-galleryoverview').css('visibility', 'visible');
+				}
+				updateContainer();
+			  }
+			} );
+		});
+
+
+
+
 
 
 		// resize Details images
 
-		    $(window).resize(function() {
-		        updateContainer();
-		    });
+	    $(window).resize(function() {
+	        updateContainer();
+	    });
 
 		function updateContainer() {
 
@@ -91,11 +99,11 @@
 			    var	newHeight = Math.round(newWidth / aspectRatio);
 			    var newNext = newWidth + 10;
 
-			    $('#details-window .next').css( 'left', newNext );
+
 			    //$('#details-window .slides_control').css( 'left', newWidth );
 			    $('#details-window .ngg-galleryoverview').css( 'width', newWidth );
 			    $('#details-window .ngg-gallery-thumbnail-box').css( 'width', newWidth );
-			// $('#details-window').slides(slidesOptions);
+			    $('#details-window a.next').css( 'left', newNext );
 			}
 
 
@@ -104,7 +112,7 @@
 
 		// Sole Agency badge
 		var sole_string = $('body').attr('class');
-		console.log (sole_string);
+		//console.log (sole_string);
 		if ( sole_string.indexOf('sole-agency') !== -1 ) { // if body class contains 'sole-agency'
 			$('#sole-agency-logo').css('display', 'block');
 			$('#text-content h1.entry-title, #text-content .the-content').css('margin-left', '29px' );

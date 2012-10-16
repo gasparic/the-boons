@@ -29,14 +29,6 @@ Author URI:     http: //www.planxdesign.eu/
     left: 0;
 }
 
- @media screen and (max-width: 1024px) { /* Specific to this particular image */
-    body #wrap,
-    body section.type-villa {
-        left: 50%;
-        margin-left: -512px;   /* 50% */
-    }
- }
-
  #language-selector ul {
     width: 46px;
  }
@@ -44,3 +36,20 @@ Author URI:     http: //www.planxdesign.eu/
  #details-control button#detail-on {
     width: 45%;
  }
+
+ @media screen and (max-width: 1024px) { /* Specific to this particular image */
+    body #wrap,
+    body section.type-villa {
+        left: 50%;
+        margin-left: -512px;   /* 50% */
+    }
+
+    #properties-menu {
+        margin-top: 0;
+    }
+
+    #properties-menu ul > li > ul > li a {
+        padding: 0 5px;
+    }
+ }
+

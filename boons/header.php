@@ -34,6 +34,10 @@
 						get_template_directory_uri() . '/js/slides.min.jquery.js',
 						array('jquery')
 					);
+	 	/* wp_enqueue_script("slides-jquery",
+						get_template_directory_uri() . '/js/slides.js',
+						array('jquery')
+					); */
 		wp_head(); ?>
 </head>
 

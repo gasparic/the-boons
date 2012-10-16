@@ -53,6 +53,13 @@ Version:        0.4.1
         height:0
     }
 
+/* advanced-browser-check
+--------------------------*/
+
+ .advanced-browser-check {
+    font-size: 1.8em;
+ }
+
 /* =Typography
 ------------------------------------------------------------------------------*/
 
@@ -925,7 +932,9 @@ Version:        0.4.1
     top: 32px;
     right: 13.28125%;
     width: 56.7125%;
+    max-width: 726px;
     /* height: 47.5161987041037%; */
+    height: auto;
     padding: 0 10px 10px;
     box-sizing: border-box;
  }
@@ -1042,14 +1051,18 @@ Version:        0.4.1
         */
 
      #details-window .ngg-galleryoverview {
-        width:706px;
+        /* width:706px; */
         overflow:hidden;
         position:relative;
-        display:none;
+        display:block;
+        visibility: hidden;
      }
      #details-window .ngg-galleryoverview {
-        width:706px;
-        height:397px;
+        max-width:706px;
+        width: 100%;
+        max-height:397px;
+        /* height: 397px; */
+        height: auto;
         margin-top: 10px;
      }
 
@@ -1062,8 +1075,10 @@ Version:        0.4.1
         */
 
      #details-window .ngg-galleryoverview div {
-        width:706px;
-        height:397px;
+        /* width:706px;
+        height:397px; */
+        width: 100%;
+        height: auto;
         display:block;
      }
 
@@ -1077,7 +1092,8 @@ Version:        0.4.1
 
         #details-window .next, #details-window .prev {
             position:absolute;
-            top:190px;
+            top:50%;
+            margin-top: -22px;
             left: -14px;
             width:24px;
             height:43px;
@@ -1090,7 +1106,8 @@ Version:        0.4.1
             background: url('images/arrow-prev.png') no-repeat center center;
         }
         #details-window .next {
-            left:716px;
+            /* left:100%; */
+            left: 706px;
             text-indent: -9999em;
             background: url('images/arrow-next.png') no-repeat center center;
         }
@@ -1154,12 +1171,12 @@ Version:        0.4.1
  }
 
  #properties-menu {
-    margin-top: 5%;
+    margin-top: 2%;
  }
 
  #access ul > li > ul > li a,
  #properties-menu ul > li > ul > li a {
-    padding: 2px;
+    padding: 0 2px;
  }
 
  #branding img#logo {
