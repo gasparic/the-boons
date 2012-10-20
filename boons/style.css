@@ -174,7 +174,8 @@ Version:        1.0.0
         position: fixed;
         top: 0;
         left: 10.9375%;
-        width: 15.625%;
+        width: 160px;
+        /*width: 15.625%;*/
         height: 100%;
         z-index: 9000;
     }
@@ -251,7 +252,8 @@ Version:        1.0.0
         #access div > ul > li > a,
         #cta-access div > ul > li > a,
         #properties-menu  div > ul > li > a {
-            text-align: center;
+            /*text-align: center;*/
+            text-align: left;
             display: block;
             width: 100%;
             line-height: 1.5;
@@ -259,7 +261,8 @@ Version:        1.0.0
             color: inherit;
             text-decoration: none;
             margin: 1.65289% 0;
-            padding-left: 1em;
+            /*padding-left: 1em;*/
+            padding-left: 1.2em;
 
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -268,7 +271,7 @@ Version:        1.0.0
         }
 
         #cta-access div > ul > li > a {
-            padding-left: 0;
+            /*padding-left: 0;*/
         }
 
         #access div > ul > li,
@@ -1214,7 +1217,7 @@ Version:        1.0.0
 
   #controls {
     left: 7.9375%;
-    width: 19.625%;
+    /*width: 19.625%;*/
   }
 
  #access div > ul > li > a, #cta-access div > ul > li > a, #properties-menu div > ul > li > a {
