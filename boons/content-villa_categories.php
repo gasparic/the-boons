@@ -32,9 +32,9 @@
 								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sa-badge.png" alt="Boon Villas - sole agency logo" width="29px" height="34px" />
 							</div> <!-- #sa-wrap -->
 						</div> <!-- end #sole-agency-logo -->
-						<h1 class="entry-title acc-header"><span class="dark-side"><?php the_title(); ?></span></h1>
+						<h1 class="entry-title acc-header dark-side"><span><?php the_title(); ?></span></h1>
 						<div class="the-content">
-						<p><span class="dark-side"><?php echo get_the_excerpt(); ?></span></p>
+						<p class="dark-side"><span><?php echo get_the_excerpt(); ?></span></p>
 						</div><!-- end #the-content-->
 				</div><!-- #text-content -->
 			</section>

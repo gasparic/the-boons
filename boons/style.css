@@ -466,6 +466,7 @@ Version:        1.0.0
 
  #content-villas #text-content p {
     padding: 0;
+    text-align: justify;
  }
 
  .page-template-default .the-content {
@@ -1249,3 +1250,15 @@ Version:        1.0.0
   }
 
  } /* end of iPad portrait */
+
+
+/* =========================== */
+/* = Steve Boon laptop          */
+/* =========================== */
+ @media screen and (max-height: 567px) and (min-width: 1200px) {
+
+ #details-window .ngg-galleryoverview {
+    max-height: 315px;
+ }
+
+  }
