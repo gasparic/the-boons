@@ -9,7 +9,16 @@
 
 	<?php
 	global $wp_query;
-	$args = array_merge( $wp_query->query_vars, array( 'post_type' => 'villa', 'posts_per_page' => 1 ) );
+	$args = array_merge(
+		$wp_query->query_vars,
+		array(
+			'post_type' => 'villa',
+			'posts_per_page' => 1,
+			'order' => ASC,
+			'orderby' => 'title'
+			)
+		);
+
 	query_posts( $args );
 	?>
 	<?php
@@ -48,7 +57,7 @@
 								<div id="nav-previous">
 									<?php
 									$placeholder = get_bloginfo('stylesheet_directory').'/images/details-nav-previous.png';
-									next_posts_link('<img src='.$placeholder.' width="50" height="32" />'); ?>
+									previous_posts_link('<img src='.$placeholder.' width="50" height="32" />'); ?>
 								</div>
 								<div id="nav-label">
 									<?php _e('Properties', 'boons'); ?>
@@ -56,7 +65,7 @@
 								<div id="nav-next">
 									<?php
 									$placeholder = get_bloginfo('stylesheet_directory').'/images/details-nav-next.png';
-									previous_posts_link('<img src='.$placeholder.' width="50" height="32" />'); ?>
+									next_posts_link('<img src='.$placeholder.' width="50" height="32" />'); ?>
 								</div>
 							</nav><!-- end nav-below -->
 
