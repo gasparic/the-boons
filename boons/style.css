@@ -288,7 +288,7 @@ Version:        1.0.0
         #properties-menu  div > ul > li:hover,
         #properties-menu  div > ul > li.current-menu-item,
         #properties-menu  div > ul > li.current-menu-ancestor {
-            background-position: 10px -62px;
+            background-position: 10px -124px;
             /* background-color: rgba(255, 255, 255, 0.75); */
         }
 
